@@ -1,5 +1,9 @@
 function Header() {
-  return <header><h1>Welcome to My React App</h1></header>;
+  return (
+    <header>
+      <h1>My Favorite Cities</h1>
+    </header>
+  );
 }
 
 export default Header;

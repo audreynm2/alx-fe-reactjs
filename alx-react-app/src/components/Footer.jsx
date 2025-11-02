@@ -1,5 +1,9 @@
 function Footer() {
-  return <footer><p>© 2025 My React App. All rights reserved.</p></footer>;
+  return (
+    <footer>
+      <p>© 2023 City Lovers</p>
+    </footer>
+  );
 }
 
 export default Footer;
