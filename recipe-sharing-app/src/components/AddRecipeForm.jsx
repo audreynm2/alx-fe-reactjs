@@ -1,8 +1,9 @@
 import { useState } from 'react';
-import useRecipeStore from '../recipeStore';
+// Corrected import path: './recipeStore' since they are in the same folder
+import useRecipeStore from './recipeStore'; 
 
 const AddRecipeForm = () => {
-  // Select only the addRecipe action from the store
+  // Select the addRecipe action from the store
   const addRecipe = useRecipeStore(state => state.addRecipe);
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');

@@ -1,7 +1,8 @@
-import useRecipeStore from '../recipeStore';
+// Corrected import path: './recipeStore' since they are in the same folder
+import useRecipeStore from './recipeStore'; 
 
 const RecipeList = () => {
-  // Select only the recipes array from the store
+  // Select the recipes array from the store
   const recipes = useRecipeStore(state => state.recipes);
 
   return (

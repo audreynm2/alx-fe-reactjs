@@ -1,6 +1,6 @@
 import AddRecipeForm from './components/AddRecipeForm'
 import RecipeList from './components/RecipeList'
-import './App.css' // Assuming you keep the default CSS for now
+import './App.css' 
 
 function App() {
   return (
