@@ -1,20 +1,25 @@
 import React from 'react';
-import './App.css'; // Keep or modify based on your preference
+import Search from './components/Search'; // Import the new Search component
+import './index.css';
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-start py-8">
-      <header className="mb-8">
-        <h1 className="text-4xl font-bold text-gray-800">
+    <div className="min-h-screen bg-gray-100 flex flex-col items-center py-10 px-4">
+      <header className="mb-10 text-center">
+        <h1 className="text-5xl font-extrabold text-gray-800">
           GitHub User Search
         </h1>
+        <p className="text-gray-500 mt-2">Find basic details for any GitHub user.</p>
       </header>
-      <main className="w-full max-w-4xl px-4">
-        {/* The Search Component will be placed here in the next task */}
-        <p className="text-center text-gray-600">
-          Application setup complete. Ready for API integration!
-        </p>
+      
+      <main className="w-full max-w-2xl">
+        {/* Integrate the Search Component here */}
+        <Search />
       </main>
+      
+      <footer className="mt-10 text-sm text-gray-400">
+        &copy; {new Date().getFullYear()} GitHub User Search App
+      </footer>
     </div>
   );
 }
