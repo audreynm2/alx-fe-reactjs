@@ -3,18 +3,41 @@
     "id": 1,
     "title": "Classic Spaghetti Carbonara",
     "summary": "A rich and classic Italian pasta dish with eggs, Pecorino cheese, guanciale, and black pepper. Ready in under 30 minutes!",
-    "image": "https://images.unsplash.com/photo-1621996346565-e9df5718ee4c?w=600&h=400&q=80&fit=crop"
+    "image": "https://images.unsplash.com/photo-1621996346565-e9df5718ee4c?w=600&h=400&q=80&fit=crop",
+    "ingredients": ["300g Spaghetti", "150g Guanciale (or Pancetta/Bacon)", "2 large Eggs", "50g Pecorino Romano cheese", "Black Pepper"],
+    "instructions": [
+      "Cook the spaghetti according to package directions.",
+      "Dice the guanciale and fry it in a pan until crispy. Remove from heat.",
+      "In a bowl, whisk the eggs, grated cheese, and plenty of black pepper.",
+      "Drain the spaghetti, reserving some pasta water.",
+      "Quickly mix the spaghetti with the egg mixture, guanciale, and pasta water to create a creamy sauce. Serve immediately."
+    ]
   },
   {
     "id": 2,
     "title": "Creamy Chicken Tikka Masala",
     "summary": "Tender chunks of grilled chicken cooked in a smooth, buttery, and creamy tomato-based gravy. A popular and comforting Indian-British fusion dish.",
-    "image": "https://images.unsplash.com/photo-1588166524941-3fcfa1a26536?w=600&h=400&q=80&fit=crop"
+    "image": "https://images.unsplash.com/photo-1588166524941-3fcfa1a26536?w=600&h=400&q=80&fit=crop",
+    "ingredients": ["500g Chicken Breast", "200g Greek Yogurt", "1 Can Crushed Tomatoes", "1 Onion", "Ginger-Garlic Paste", "Garam Masala", "Heavy Cream"],
+    "instructions": [
+      "Marinate chicken in yogurt and spices for at least 30 minutes.",
+      "Grill or bake the chicken until cooked through.",
+      "Sauté chopped onion, then add ginger-garlic paste and spices.",
+      "Stir in crushed tomatoes and simmer.",
+      "Add the cooked chicken and cream. Simmer for 10 minutes. Serve with rice or naan."
+    ]
   },
   {
     "id": 3,
     "title": "Ultimate Beef Tacos",
     "summary": "Simple, flavourful ground beef tacos seasoned perfectly and served in warm corn tortillas with your favourite toppings.",
-    "image": "https://images.unsplash.com/photo-1552331570-5b72266850b5?w=600&h=400&q=80&fit=crop"
+    "image": "https://images.unsplash.com/photo-1552331570-5b72266850b5?w=600&h=400&q=80&fit=crop",
+    "ingredients": ["500g Ground Beef", "1 packet Taco Seasoning", "1/2 cup Water", "12 Corn Tortillas", "Lettuce", "Salsa", "Shredded Cheese"],
+    "instructions": [
+      "Brown the ground beef and drain any excess fat.",
+      "Stir in the taco seasoning and water. Bring to a simmer and cook until the water has reduced.",
+      "Warm the tortillas.",
+      "Spoon the beef mixture into the tortillas and top with lettuce, salsa, and cheese."
+    ]
   }
 ]
