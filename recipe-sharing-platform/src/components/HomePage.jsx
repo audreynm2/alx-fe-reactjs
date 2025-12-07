@@ -1,13 +1,12 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom'; // Required for navigation (Task 2/3)
-import recipeData from '../data.json'; // Load mock data
+import { Link } from 'react-router-dom';
+import recipeData from '../data.json';
 
 const HomePage = () => {
   const [recipes, setRecipes] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate data fetching delay if needed, but for static JSON, load directly
     setRecipes(recipeData);
     setLoading(false);
   }, []);
@@ -22,17 +21,15 @@ const HomePage = () => {
         Featured Recipes 🍲
       </h2>
       
-      {/* Responsive Grid Layout (Step 4) */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      {/* FIX: Updated the grid to include md:grid-cols-2 for explicit medium-screen support */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {recipes.map((recipe) => (
           
-          {/* Use a placeholder Link component for Task 2's future routing */}
           <Link 
             key={recipe.id} 
             to={`/recipe/${recipe.id}`} 
             className="group block"
           >
-            {/* Recipe Card Styling (Step 3) */}
             <div className="bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 ease-in-out transform hover:shadow-xl hover:scale-[1.02]">
               <img 
                 src={recipe.image} 
