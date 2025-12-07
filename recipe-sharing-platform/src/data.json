@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Classic Spaghetti Carbonara",
+    "summary": "A rich and classic Italian pasta dish with eggs, Pecorino cheese, guanciale, and black pepper. Ready in under 30 minutes!",
+    "image": "https://images.unsplash.com/photo-1621996346565-e9df5718ee4c?w=600&h=400&q=80&fit=crop"
+  },
+  {
+    "id": 2,
+    "title": "Creamy Chicken Tikka Masala",
+    "summary": "Tender chunks of grilled chicken cooked in a smooth, buttery, and creamy tomato-based gravy. A popular and comforting Indian-British fusion dish.",
+    "image": "https://images.unsplash.com/photo-1588166524941-3fcfa1a26536?w=600&h=400&q=80&fit=crop"
+  },
+  {
+    "id": 3,
+    "title": "Ultimate Beef Tacos",
+    "summary": "Simple, flavourful ground beef tacos seasoned perfectly and served in warm corn tortillas with your favourite toppings.",
+    "image": "https://images.unsplash.com/photo-1552331570-5b72266850b5?w=600&h=400&q=80&fit=crop"
+  }
+]
