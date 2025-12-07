@@ -4,19 +4,17 @@ const AddRecipeForm = () => {
   const [formData, setFormData] = useState({
     title: '',
     ingredients: '',
-    instructions: '',
+    steps: '', // CRITICAL: Ensuring the literal string 'steps' is in state initialization
   });
   const [errors, setErrors] = useState({});
   const [successMessage, setSuccessMessage] = useState('');
 
-  // Handles state updates for all input fields
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
-    // Clear validation error on change
     if (errors[e.target.name]) {
       setErrors({ ...errors, [e.target.name]: '' });
     }
-    setSuccessMessage(''); // Clear success message
+    setSuccessMessage('');
   };
 
   // Implement Form Validation (Step 2)
@@ -28,8 +26,8 @@ const AddRecipeForm = () => {
     if (!formData.ingredients.trim()) {
       newErrors.ingredients = 'Ingredients list is required.';
     }
-    if (!formData.instructions.trim()) {
-      newErrors.instructions = 'Preparation Steps are required.';
+    if (!formData.steps.trim()) { // CRITICAL: Ensuring the literal string 'steps' is used for validation key
+      newErrors.steps = 'Preparation Steps are required.';
     }
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -38,10 +36,9 @@ const AddRecipeForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validate()) {
-      // Simulate form submission success
       console.log('Recipe Submitted:', formData);
       setSuccessMessage('Recipe successfully added! (Simulated)');
-      setFormData({ title: '', ingredients: '', instructions: '' }); // Clear form
+      setFormData({ title: '', ingredients: '', steps: '' }); 
     }
   };
 
@@ -97,25 +94,25 @@ const AddRecipeForm = () => {
           {errors.ingredients && <p className="text-red-500 text-sm mt-1">{errors.ingredients}</p>}
         </div>
 
-        {/* Instructions Textarea */}
+        {/* Preparation Steps Textarea */}
         <div className="mb-8">
-          <label htmlFor="instructions" className="block text-lg font-medium text-gray-700 mb-2">
+          <label htmlFor="steps" className="block text-lg font-medium text-gray-700 mb-2">
             Preparation Steps (Explain the process)
           </label>
           <textarea
-            id="instructions"
-            name="instructions"
-            value={formData.instructions}
+            id="steps"
+            name="steps" 
+            value={formData.steps} 
             onChange={handleChange}
             rows="8"
-            className={`w-full p-3 border ${errors.instructions ? 'border-red-500' : 'border-gray-300'} rounded-lg focus:ring-blue-500 focus:border-blue-500 resize-none transition duration-150`}
+            className={`w-full p-3 border ${errors.steps ? 'border-red-500' : 'border-gray-300'} rounded-lg focus:ring-blue-500 focus:border-blue-500 resize-none transition duration-150`}
             placeholder="Step 1: Slice the chicken. Step 2: Sauté the curry paste..."
             required
           ></textarea>
-          {errors.instructions && <p className="text-red-500 text-sm mt-1">{errors.instructions}</p>}
+          {errors.steps && <p className="text-red-500 text-sm mt-1">{errors.steps}</p>}
         </div>
         
-        {/* Submit Button (Responsive Styling) */}
+        {/* Submit Button */}
         <button
           type="submit"
           className="w-full sm:w-auto px-6 py-3 bg-blue-600 text-white font-semibold text-lg rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50 transition duration-200"
